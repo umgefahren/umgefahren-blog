@@ -4,4 +4,4 @@ RUN jekyll build
 
 FROM caddy:alpine
 COPY --from=builder /srv/jekyll/_site /srv
-CMD [ "caddy", "run" ]
+CMD [ "caddy", "file-server" ]
